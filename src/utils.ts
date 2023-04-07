@@ -116,7 +116,7 @@ const Utils = {
       if ( !remote ) return;
 
       const ref = remote.refs.fetch || remote.refs.push,
-            re = /\.[^.:/]+[:/]([^/]+)\/(.*?)(?:\.git|\/)?$/,
+            re = /\.[^.:/]+(?:[^/]+)\/([^/]+)\/(.*?)(?:\.git|\/)?$/,
             match = re.exec ( ref );
 
       if ( !match ) return;
